@@ -1,15 +1,60 @@
 import XCTest
 @testable import LibXml2Swift
 
+import CLibxml
+
+func creatNodeName(node: XmlDomNode) -> String {
+    
+    var first = true
+    
+    var str = node.name + "("
+    
+    for attr in node.attributes {
+        
+        if (first) {
+            first = false
+        } else {
+            str += ", "
+        }
+        
+        str += attr.name + "='" + attr.value + "'"
+    }
+    
+    str += ")"
+    
+    return str
+}
+
+func print_element_names(node: XmlDomNode, prefix: String = "") {
+ 
+    print("\(prefix)\(creatNodeName(node: node))")
+    
+    for child in node.children {
+        print_element_names(node: child, prefix: prefix + "\t")
+    }
+    
+}
+
 class LibXml2SwiftTests: XCTestCase {
     
     func testExample() {
         
-        
-        
-        
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual(LibXml2Swift().text, "Hello, World!")
+        do {
+            
+            // XML Url
+            let url = URL(fileURLWithPath: "Files/MainMenu.xib")
+            
+            // Open documents
+            let document = try XmlDomReader.read(atPath: url)
+            
+            // Recherche de l'eleemnt racine
+            let rootElement = try document.rootElement()
+            
+            // Print root element
+            print_element_names(node: rootElement)
+            
+        } catch {
+            XCTFail("\(error)")
+        }
     }
 }

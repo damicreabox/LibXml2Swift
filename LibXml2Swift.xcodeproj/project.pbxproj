@@ -1,230 +1,362 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {};
-    objectVersion = 46;
-    rootObject = __RootObject_;
-    objects = {
-        __RootObject_ = {
-            isa = PBXProject;
-            attributes = {LastUpgradeCheck = 9999;};
-            buildConfigurationList = ___RootConfs_;
-            compatibilityVersion = 'Xcode 3.2';
-            developmentRegion = English;
-            hasScannedForEncodings = 0;
-            knownRegions = (en);
-            mainGroup = ___RootGroup_;
-            productRefGroup = ____Products_;
-            projectDirPath = '';
-            projectRoot = '';
-            targets = (______Target_LibXml2Swift, ______Target_LibXml2SwiftTests);
-        };
-        '__PBXFileRef_Package.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            path = 'Package.swift';
-            sourceTree = '<group>';
-        };
-        ___RootGroup_ = {
-            isa = PBXGroup;
-            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_,  Dependencies_, _______Tests_, ____Products_);
-            sourceTree = '<group>';
-        };
-        _______Group_LibXml2Swift = {
-            isa = PBXGroup;
-            name = 'LibXml2Swift';
-            path = 'Sources';
-            sourceTree = '<group>';
-            children = ('__PBXFileRef_Sources/LibXml2Swift.swift');
-        };
-        '__PBXFileRef_Sources/LibXml2Swift.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            path = 'LibXml2Swift.swift';
-            sourceTree = '<group>';
-        };
-        ______Target_LibXml2Swift = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = _______Confs_LibXml2Swift;
-            buildPhases = (CompilePhase_LibXml2Swift, ___LinkPhase_LibXml2Swift);
-            buildRules = ();
-            dependencies = ();
-            name = 'LibXml2Swift';
-            productName = LibXml2Swift;
-            productReference = _____Product_LibXml2Swift;
-            productType = 'com.apple.product-type.framework';
-        };
-        _____Product_LibXml2Swift = {
-            isa = PBXFileReference;
-            explicitFileType = 'wrapper.framework';
-            path = 'LibXml2Swift.framework';
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        CompilePhase_LibXml2Swift = {
-            isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Sources/LibXml2Swift.swift');
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        '__src_cc_ref_Sources/LibXml2Swift.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/LibXml2Swift.swift';
-        };
-        ___LinkPhase_LibXml2Swift = {
-            isa = PBXFrameworksBuildPhase;
-            files = ();
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        _______Confs_LibXml2Swift = {
-            isa = XCConfigurationList;
-            buildConfigurations = (___DebugConf_LibXml2Swift, _ReleaseConf_LibXml2Swift);
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Debug;
-        };
-        ___DebugConf_LibXml2Swift = {
-            isa = XCBuildConfiguration;
-            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2'; INFOPLIST_FILE = 'LibXml2Swift.xcodeproj/LibXml2Swift_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1'; PRODUCT_BUNDLE_IDENTIFIER = 'LibXml2Swift'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/libxml2/2.9.4/lib -lxml2'; };
-            name = Debug;
-        };
-        _ReleaseConf_LibXml2Swift = {
-            isa = XCBuildConfiguration;
-            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2'; INFOPLIST_FILE = 'LibXml2Swift.xcodeproj/LibXml2Swift_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1'; PRODUCT_BUNDLE_IDENTIFIER = 'LibXml2Swift'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/libxml2/2.9.4/lib -lxml2'; };
-            name = Release;
-        };
-        __Dependency_LibXml2Swift = {
-            isa = PBXTargetDependency;
-            target = ______Target_LibXml2Swift;
-        };
-        _______Group_LibXml2SwiftTests = {
-            isa = PBXGroup;
-            name = 'LibXml2SwiftTests';
-            path = 'Tests/LibXml2SwiftTests';
-            sourceTree = '<group>';
-            children = ('__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift', '__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift');
-        };
-        '__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            path = 'LibXml2SwiftTests.swift';
-            sourceTree = '<group>';
-        };
-        '__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            path = 'LibXml2SwiftTestsManifest.swift';
-            sourceTree = '<group>';
-        };
-        ______Target_LibXml2SwiftTests = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = _______Confs_LibXml2SwiftTests;
-            buildPhases = (CompilePhase_LibXml2SwiftTests, ___LinkPhase_LibXml2SwiftTests);
-            buildRules = ();
-            dependencies = (__Dependency_LibXml2Swift);
-            name = 'LibXml2SwiftTests';
-            productName = LibXml2SwiftTests;
-            productReference = _____Product_LibXml2SwiftTests;
-            productType = 'com.apple.product-type.bundle.unit-test';
-        };
-        _____Product_LibXml2SwiftTests = {
-            isa = PBXFileReference;
-            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
-            path = 'LibXml2SwiftTests.xctest';
-            sourceTree = BUILT_PRODUCTS_DIR;
-        };
-        CompilePhase_LibXml2SwiftTests = {
-            isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift', '__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift');
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        '__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift';
-        };
-        '__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift';
-        };
-        ___LinkPhase_LibXml2SwiftTests = {
-            isa = PBXFrameworksBuildPhase;
-            files = (_LinkFileRef_LibXml2Swift_via_LibXml2SwiftTests);
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        _LinkFileRef_LibXml2Swift_via_LibXml2SwiftTests = {
-            isa = PBXBuildFile;
-            fileRef = _____Product_LibXml2Swift;
-        };
-        _______Confs_LibXml2SwiftTests = {
-            isa = XCConfigurationList;
-            buildConfigurations = (___DebugConf_LibXml2SwiftTests, _ReleaseConf_LibXml2SwiftTests);
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Debug;
-        };
-        ___DebugConf_LibXml2SwiftTests = {
-            isa = XCBuildConfiguration;
-            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2'; INFOPLIST_FILE = 'LibXml2Swift.xcodeproj/LibXml2SwiftTests_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/libxml2/2.9.4/lib -lxml2'; SWIFT_VERSION = '3.0'; };
-            name = Debug;
-        };
-        _ReleaseConf_LibXml2SwiftTests = {
-            isa = XCBuildConfiguration;
-            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2'; INFOPLIST_FILE = 'LibXml2Swift.xcodeproj/LibXml2SwiftTests_Info.plist'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/libxml2/2.9.4/lib -lxml2'; SWIFT_VERSION = '3.0'; };
-            name = Release;
-        };
-        __Dependency_LibXml2SwiftTests = {
-            isa = PBXTargetDependency;
-            target = ______Target_LibXml2SwiftTests;
-        };
-        '__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig' = {
-            isa = PBXFileReference;
-            lastKnownFileType = text.xcconfig;
-            path = 'LibXml2Swift.xcodeproj/Configs/Project.xcconfig';
-            sourceTree = '<group>';
-        };
-        _____Configs_ = {
-            isa = PBXGroup;
-            children = ('__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig');
-            name = Configs;
-            sourceTree = '<group>';
-        };
-        _____Sources_ = {
-            isa = PBXGroup;
-            children = (_______Group_LibXml2Swift);
-            name = Sources;
-            sourceTree = '<group>';
-        };
-        _______Tests_ = {
-            isa = PBXGroup;
-            children = (_______Group_LibXml2SwiftTests);
-            name = Tests;
-            sourceTree = '<group>';
-        };
-       TestProducts_ = {
-            isa = PBXGroup;
-            children = (_____Product_LibXml2SwiftTests);
-            name = Tests;
-            sourceTree = '<group>';
-        };
-        ____Products_ = {
-            isa = PBXGroup;
-            children = (TestProducts_, _____Product_LibXml2Swift);
-            name = Products;
-            sourceTree = '<group>';
-        };
-        _______Debug_ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = '__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig';
-            buildSettings = {};
-            name = Debug;
-        };
-        _____Release_ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = '__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig';
-            buildSettings = {};
-            name = Release;
-        };
-        ___RootConfs_ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (_______Debug_, _____Release_);
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Debug;
-        };
-    };
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37527F381DAEA97100BCFE57 /* XmlDomDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F351DAEA97100BCFE57 /* XmlDomDocument.swift */; };
+		37527F391DAEA97100BCFE57 /* XmlDomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F361DAEA97100BCFE57 /* XmlDomElement.swift */; };
+		37527F3A1DAEA97100BCFE57 /* XmlDomNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F371DAEA97100BCFE57 /* XmlDomNode.swift */; };
+		37527F3C1DAEAB0A00BCFE57 /* XmlDomReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */; };
+		37527F3E1DAECD2400BCFE57 /* XmlDomAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */; };
+		_LinkFileRef_LibXml2Swift_via_LibXml2SwiftTests /* LibXml2Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LibXml2Swift" /* LibXml2Swift.framework */; };
+		__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift */; };
+		__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37527F2D1DAEA81B00BCFE57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_LibXml2Swift";
+			remoteInfo = LibXml2Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37527F351DAEA97100BCFE57 /* XmlDomDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomDocument.swift; sourceTree = "<group>"; };
+		37527F361DAEA97100BCFE57 /* XmlDomElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomElement.swift; sourceTree = "<group>"; };
+		37527F371DAEA97100BCFE57 /* XmlDomNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomNode.swift; sourceTree = "<group>"; };
+		37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomReader.swift; sourceTree = "<group>"; };
+		37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomAttribute.swift; sourceTree = "<group>"; };
+		__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig /* LibXml2Swift.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = LibXml2Swift.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibXml2SwiftTests.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibXml2SwiftTestsManifest.swift; sourceTree = "<group>"; };
+		"_____Product_LibXml2Swift" /* LibXml2Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibXml2Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_LibXml2SwiftTests" /* LibXml2SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LibXml2SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		"___LinkPhase_LibXml2Swift" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_LibXml2SwiftTests" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_LibXml2Swift_via_LibXml2SwiftTests /* LibXml2Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37527F341DAEA97100BCFE57 /* LibXml2Swift */ = {
+			isa = PBXGroup;
+			children = (
+				37527F351DAEA97100BCFE57 /* XmlDomDocument.swift */,
+				37527F361DAEA97100BCFE57 /* XmlDomElement.swift */,
+				37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */,
+				37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */,
+				37527F371DAEA97100BCFE57 /* XmlDomNode.swift */,
+			);
+			name = LibXml2Swift;
+			path = Sources/LibXml2Swift;
+			sourceTree = "<group>";
+		};
+		TestProducts_ /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_LibXml2SwiftTests" /* LibXml2SwiftTests.xctest */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Configs_" /* Configs */,
+				"_____Sources_" /* Sources */,
+				"_______Tests_" /* Tests */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				TestProducts_ /* Tests */,
+				"_____Product_LibXml2Swift" /* LibXml2Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Configs_" /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig /* LibXml2Swift.xcodeproj/Configs/Project.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				37527F341DAEA97100BCFE57 /* LibXml2Swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_LibXml2SwiftTests" /* LibXml2SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift */,
+				__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift */,
+			);
+			name = LibXml2SwiftTests;
+			path = Tests/LibXml2SwiftTests;
+			sourceTree = "<group>";
+		};
+		"_______Tests_" /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_LibXml2SwiftTests" /* LibXml2SwiftTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"______Target_LibXml2Swift" /* LibXml2Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_LibXml2Swift" /* Build configuration list for PBXNativeTarget "LibXml2Swift" */;
+			buildPhases = (
+				CompilePhase_LibXml2Swift /* Sources */,
+				"___LinkPhase_LibXml2Swift" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibXml2Swift;
+			productName = LibXml2Swift;
+			productReference = "_____Product_LibXml2Swift" /* LibXml2Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"______Target_LibXml2SwiftTests" /* LibXml2SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_LibXml2SwiftTests" /* Build configuration list for PBXNativeTarget "LibXml2SwiftTests" */;
+			buildPhases = (
+				CompilePhase_LibXml2SwiftTests /* Sources */,
+				"___LinkPhase_LibXml2SwiftTests" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_LibXml2Swift /* PBXTargetDependency */,
+			);
+			name = LibXml2SwiftTests;
+			productName = LibXml2SwiftTests;
+			productReference = "_____Product_LibXml2SwiftTests" /* LibXml2SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "LibXml2Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_LibXml2Swift" /* LibXml2Swift */,
+				"______Target_LibXml2SwiftTests" /* LibXml2SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CompilePhase_LibXml2Swift /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				37527F381DAEA97100BCFE57 /* XmlDomDocument.swift in Sources */,
+				37527F3C1DAEAB0A00BCFE57 /* XmlDomReader.swift in Sources */,
+				37527F3A1DAEA97100BCFE57 /* XmlDomNode.swift in Sources */,
+				37527F391DAEA97100BCFE57 /* XmlDomElement.swift in Sources */,
+				37527F3E1DAECD2400BCFE57 /* XmlDomAttribute.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_LibXml2SwiftTests /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift in Sources */,
+				__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		__Dependency_LibXml2Swift /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_LibXml2Swift" /* LibXml2Swift */;
+			targetProxy = 37527F2D1DAEA81B00BCFE57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		_ReleaseConf_LibXml2Swift /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1";
+				INFOPLIST_FILE = LibXml2Swift.xcodeproj/LibXml2Swift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libxml2/2.9.4/lib",
+					"-lxml2",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = LibXml2Swift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		_ReleaseConf_LibXml2SwiftTests /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1";
+				INFOPLIST_FILE = LibXml2Swift.xcodeproj/LibXml2SwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libxml2/2.9.4/lib",
+					"-lxml2",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		"___DebugConf_LibXml2Swift" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1";
+				INFOPLIST_FILE = LibXml2Swift.xcodeproj/LibXml2Swift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libxml2/2.9.4/lib",
+					"-lxml2",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = LibXml2Swift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"___DebugConf_LibXml2SwiftTests" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/LibXml2Swift/Packages/CLibxml-0.0.1";
+				INFOPLIST_FILE = LibXml2Swift.xcodeproj/LibXml2SwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/libxml2/2.9.4/lib",
+					"-lxml2",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.4/include/libxml2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig /* LibXml2Swift.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig /* LibXml2Swift.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		"___RootConfs_" /* Build configuration list for PBXProject "LibXml2Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_LibXml2Swift" /* Build configuration list for PBXNativeTarget "LibXml2Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_LibXml2Swift" /* Debug */,
+				_ReleaseConf_LibXml2Swift /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_LibXml2SwiftTests" /* Build configuration list for PBXNativeTarget "LibXml2SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_LibXml2SwiftTests" /* Debug */,
+				_ReleaseConf_LibXml2SwiftTests /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
 }
