@@ -12,6 +12,7 @@
 		37527F3A1DAEA97100BCFE57 /* XmlDomNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F371DAEA97100BCFE57 /* XmlDomNode.swift */; };
 		37527F3C1DAEAB0A00BCFE57 /* XmlDomReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */; };
 		37527F3E1DAECD2400BCFE57 /* XmlDomAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */; };
+		37527F401DAED91900BCFE57 /* XmlDomTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37527F3F1DAED91900BCFE57 /* XmlDomTextNode.swift */; };
 		_LinkFileRef_LibXml2Swift_via_LibXml2SwiftTests /* LibXml2Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LibXml2Swift" /* LibXml2Swift.framework */; };
 		__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift */; };
 		__src_cc_ref_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTestsManifest.swift /* LibXml2SwiftTestsManifest.swift */; };
@@ -33,6 +34,7 @@
 		37527F371DAEA97100BCFE57 /* XmlDomNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomNode.swift; sourceTree = "<group>"; };
 		37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomReader.swift; sourceTree = "<group>"; };
 		37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomAttribute.swift; sourceTree = "<group>"; };
+		37527F3F1DAED91900BCFE57 /* XmlDomTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlDomTextNode.swift; sourceTree = "<group>"; };
 		__PBXFileRef_LibXml2Swift.xcodeproj/Configs/Project.xcconfig /* LibXml2Swift.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = LibXml2Swift.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Tests/LibXml2SwiftTests/LibXml2SwiftTests.swift /* LibXml2SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibXml2SwiftTests.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				37527F351DAEA97100BCFE57 /* XmlDomDocument.swift */,
+				37527F3F1DAED91900BCFE57 /* XmlDomTextNode.swift */,
 				37527F361DAEA97100BCFE57 /* XmlDomElement.swift */,
 				37527F3D1DAECD2400BCFE57 /* XmlDomAttribute.swift */,
 				37527F3B1DAEAB0A00BCFE57 /* XmlDomReader.swift */,
@@ -203,6 +206,7 @@
 			buildActionMask = 0;
 			files = (
 				37527F381DAEA97100BCFE57 /* XmlDomDocument.swift in Sources */,
+				37527F401DAED91900BCFE57 /* XmlDomTextNode.swift in Sources */,
 				37527F3C1DAEAB0A00BCFE57 /* XmlDomReader.swift in Sources */,
 				37527F3A1DAEA97100BCFE57 /* XmlDomNode.swift in Sources */,
 				37527F391DAEA97100BCFE57 /* XmlDomElement.swift in Sources */,

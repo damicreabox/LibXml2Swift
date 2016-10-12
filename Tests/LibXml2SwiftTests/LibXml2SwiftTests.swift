@@ -1,6 +1,7 @@
 import XCTest
 @testable import LibXml2Swift
 
+import Foundation
 import CLibxml
 
 func creatNodeName(node: XmlDomNode) -> String {
@@ -27,10 +28,15 @@ func creatNodeName(node: XmlDomNode) -> String {
 
 func print_element_names(node: XmlDomNode, prefix: String = "") {
  
-    print("\(prefix)\(creatNodeName(node: node))")
-    
-    for child in node.children {
-        print_element_names(node: child, prefix: prefix + "\t")
+    if (node.type == .element) {
+        print("\(prefix)\(creatNodeName(node: node))")
+        for child in node.children {
+            print_element_names(node: child, prefix: prefix + "\t")
+        }
+    } else {
+        if (!node.name.isEmpty) {
+            print(prefix + " -> " + node.name)
+        }
     }
     
 }

@@ -49,8 +49,10 @@ internal func createNode(node: xmlNodePtr) throws -> XmlDomNode {
     switch type {
     case .element :
         return try XmlDomElement(node: node)
-    default:
-        throw XmlParserError.unknownError(msg: "Type not implemented : \(node.pointee.type)")
+    case .text :
+        return try XmlDomTextNode(node: node)
+    //default:
+    //    throw XmlParserError.unknownError(msg: "Type not implemented : \(node.pointee.type)")
     }
 }
 
@@ -58,8 +60,35 @@ public class GenericXmlDomNode {
     
     internal var node : xmlNodePtr
     
-    lazy public var name : String = {
-        return String(cString: self.node.pointee.name)
+    public lazy var children : [XmlDomNode] = {
+        var nodes = [XmlDomNode]()
+        
+        var childPtr = self.node.pointee.children
+        while (childPtr != nil) {
+            
+            if let node = try? createNode(node: childPtr!) {
+                nodes.append(node)
+            }
+            
+            childPtr = childPtr!.pointee.next
+        }
+        
+        return nodes
+    } ()
+    
+    
+    public lazy var attributes: [XmlDomAttribute] = {
+        var attributes = [XmlDomAttribute]()
+        
+        var attrPtr = self.node.pointee.properties
+        while (attrPtr != nil) {
+            
+            attributes.append(XmlDomAttribute(attr: attrPtr!))
+            
+            attrPtr = attrPtr!.pointee.next
+        }
+        
+        return attributes
     } ()
     
     init(node: xmlNodePtr) throws {
