@@ -38,6 +38,10 @@ public protocol XmlDomNode {
     var children: [XmlDomNode] {
         get
     }
+    
+    subscript(name: String) -> XmlDomElement? {
+        get
+    }
 }
 
 internal func createNode(node: xmlNodePtr) throws -> XmlDomNode {
@@ -90,6 +94,24 @@ public class GenericXmlDomNode {
         
         return attributes
     } ()
+    
+    lazy private var dico: Dictionary<String, XmlDomElement> = {
+        var dico = Dictionary<String, XmlDomElement>()
+        
+        for child in self.children {
+            if let element = child as? XmlDomElement {
+                dico[element.name] = element
+            }
+        }
+        
+        return dico
+    } ()
+    
+    public subscript(name: String) -> XmlDomElement? {
+        get {
+            return dico[name]
+        }
+    }
     
     init(node: xmlNodePtr) throws {
         self.node = node
