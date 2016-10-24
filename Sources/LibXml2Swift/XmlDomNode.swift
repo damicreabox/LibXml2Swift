@@ -95,7 +95,19 @@ public class GenericXmlDomNode {
         return attributes
     } ()
     
-    lazy private var dico: Dictionary<String, XmlDomElement> = {
+    private lazy var attributesDico: Dictionary<String, XmlDomAttribute> = {
+        var attrs = Dictionary<String, XmlDomAttribute>()
+        for attr in self.attributes {
+            attrs[attr.name] = attr
+        }
+        return attrs
+    } ()
+    
+    public func attribute(name: String) -> XmlDomAttribute? {
+        return attributesDico[name]
+    }
+    
+    lazy private var elementDico: Dictionary<String, XmlDomElement> = {
         var dico = Dictionary<String, XmlDomElement>()
         
         for child in self.children {
@@ -109,7 +121,7 @@ public class GenericXmlDomNode {
     
     public subscript(name: String) -> XmlDomElement? {
         get {
-            return dico[name]
+            return elementDico[name]
         }
     }
     
