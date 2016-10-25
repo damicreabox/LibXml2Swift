@@ -123,6 +123,7 @@ public class GenericXmlDomNode {
     
     /// Load dico of elements lazily
     lazy private var elementDico: Dictionary<String, [XmlDomElement]> = {
+        
         var dico = Dictionary<String, [XmlDomElement]>()
         
         for child in self.children {
@@ -131,10 +132,11 @@ public class GenericXmlDomNode {
                 var elements = dico[element.name]
                 if (elements == nil) {
                     elements = [XmlDomElement]()
-                    dico[element.name] = elements
                 }
                 
                 elements!.append(element)
+                
+                dico[element.name] = elements
             }
         }
         
@@ -153,7 +155,7 @@ public class GenericXmlDomNode {
     /// Find element
     public func child(name: String) -> XmlDomElement? {
         if let elements = elementDico[name] {
-            return elements[0]
+            return elements.first
         } else {
             return nil
         }
