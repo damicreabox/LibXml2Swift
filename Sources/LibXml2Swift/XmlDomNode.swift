@@ -35,13 +35,16 @@ public protocol XmlDomNode {
         get
     }
     
+    subscript(name: String) -> XmlDomAttribute? {
+        get
+    }
+    
     var children: [XmlDomNode] {
         get
     }
     
-    subscript(name: String) -> XmlDomElement? {
-        get
-    }
+    func children(name: String) -> [XmlDomElement]
+    func child(name: String) -> XmlDomElement?
 }
 
 internal func createNode(node: xmlNodePtr) throws -> XmlDomNode {
@@ -62,8 +65,46 @@ internal func createNode(node: xmlNodePtr) throws -> XmlDomNode {
 
 public class GenericXmlDomNode {
     
+    // Libxml2 pointer
     internal var node : xmlNodePtr
     
+    // --- Attributes ---
+    
+    /// All attributes load lazily
+    public lazy var attributes: [XmlDomAttribute] = {
+        var attributes = [XmlDomAttribute]()
+        
+        var attrPtr = self.node.pointee.properties
+        while (attrPtr != nil) {
+            
+            attributes.append(XmlDomAttribute(attr: attrPtr!))
+            
+            attrPtr = attrPtr!.pointee.next
+        }
+        
+        return attributes
+    } ()
+    
+    /// Load dico of attributes lazily
+    private lazy var attributesDico: Dictionary<String, XmlDomAttribute> = {
+        var attrs = Dictionary<String, XmlDomAttribute>()
+        for attr in self.attributes {
+            attrs[attr.name] = attr
+        }
+        return attrs
+    } ()
+    
+    
+    /// Find attribute
+    public subscript(name: String) -> XmlDomAttribute? {
+        get {
+            return attributesDico[name]
+        }
+    }
+    
+    // --- Children ---
+    
+    /// All children loaded lazily
     public lazy var children : [XmlDomNode] = {
         var nodes = [XmlDomNode]()
         
@@ -80,48 +121,41 @@ public class GenericXmlDomNode {
         return nodes
     } ()
     
-    
-    public lazy var attributes: [XmlDomAttribute] = {
-        var attributes = [XmlDomAttribute]()
-        
-        var attrPtr = self.node.pointee.properties
-        while (attrPtr != nil) {
-            
-            attributes.append(XmlDomAttribute(attr: attrPtr!))
-            
-            attrPtr = attrPtr!.pointee.next
-        }
-        
-        return attributes
-    } ()
-    
-    private lazy var attributesDico: Dictionary<String, XmlDomAttribute> = {
-        var attrs = Dictionary<String, XmlDomAttribute>()
-        for attr in self.attributes {
-            attrs[attr.name] = attr
-        }
-        return attrs
-    } ()
-    
-    public func attribute(name: String) -> XmlDomAttribute? {
-        return attributesDico[name]
-    }
-    
-    lazy private var elementDico: Dictionary<String, XmlDomElement> = {
-        var dico = Dictionary<String, XmlDomElement>()
+    /// Load dico of elements lazily
+    lazy private var elementDico: Dictionary<String, [XmlDomElement]> = {
+        var dico = Dictionary<String, [XmlDomElement]>()
         
         for child in self.children {
             if let element = child as? XmlDomElement {
-                dico[element.name] = element
+                
+                var elements = dico[element.name]
+                if (elements == nil) {
+                    elements = [XmlDomElement]()
+                    dico[element.name] = elements
+                }
+                
+                elements!.append(element)
             }
         }
         
         return dico
     } ()
     
-    public subscript(name: String) -> XmlDomElement? {
-        get {
-            return elementDico[name]
+    /// Find elements by name
+    public func children(name: String) -> [XmlDomElement] {
+        if let elements =  elementDico[name] {
+            return elements
+        } else {
+            return [XmlDomElement]()
+        }
+    }
+    
+    /// Find element
+    public func child(name: String) -> XmlDomElement? {
+        if let elements = elementDico[name] {
+            return elements[0]
+        } else {
+            return nil
         }
     }
     

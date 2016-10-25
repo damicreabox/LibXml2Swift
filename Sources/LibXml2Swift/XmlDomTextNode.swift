@@ -11,6 +11,8 @@ import Foundation
 import CLibxml
 
 public class XmlDomTextNode : GenericXmlDomNode, XmlDomNode {
+
+
     
     public let type = XmlDomNodeType.text
     
